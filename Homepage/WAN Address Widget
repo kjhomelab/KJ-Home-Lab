@@ -1,0 +1,18 @@
+- Admin Console:
+    - My WAN IP:
+        #icon: /icons/contabo.png  # If you have saved icons locally. Please feel free to choose the icon of your choice.
+        icon: contabo.png  # If you have NOT saved icons locally. Please feel free to choose the icon of your choice.
+        widget:
+          type: customapi
+          url: https://api.ipify.org?format=json
+          refreshInterval: 43200000 # 12 hours in milliseconds
+          #username: username # auth - optional
+          #password: password # auth - optional
+          method: GET # optional, e.g. POST
+          #headers: # optional, must be object, see below
+          #requestBody: # optional, can be string or object, see below
+          #display: WAN IP # optional, default to block, see below
+          mappings:
+          - field: 'ip' # needs to be YAML string or object
+            #label: Field 1
+            format: text # optional - defaults to text
